@@ -23,20 +23,27 @@ object BenServer extends StreamApp[IO] with Http4sDsl[IO] {
     httpClient.expect[Json](target)
   }
 
-  def chooseBen(bens: IO[Json]) : Json = {
+  def chooseBen(bens: IO[Json]) : IO[Json] = {
     val random = new scala.util.Random
     val randomNumber = random.nextInt(100)
-    val name = bens.unsafeRunSync().asArray.get(1).asArray.get(randomNumber)
-    Json.obj(
-      "Name" -> bens.unsafeRunSync().asArray.get(1).asArray.get(randomNumber),
-      "Description" -> bens.unsafeRunSync().asArray.get(2).asArray.get(randomNumber),
-      "Url" -> bens.unsafeRunSync().asArray.get(3).asArray.get(randomNumber)
-    )
+
+    def select(element: Json, index : Int) : Json = {
+      element.asArray.get(index).asArray.get(randomNumber)
+    }
+
+    bens.map{
+      x =>
+      Json.obj(
+        "Name" -> select(x,1),
+        "Description" -> select(x,2),
+        "Url" -> select(x,3)
+      )
+    }
   }
 
   val benService: HttpService[IO] = HttpService[IO] {
     case GET -> Root / "ben" =>
-      Ok(Json.obj("Result" -> chooseBen(getBens())))
+      Ok(Json.obj("Result" -> chooseBen(getBens()).unsafeRunSync()))
   }
 
   def stream(args: List[String], requestShutdown: IO[Unit]) =

@@ -1,0 +1,4 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/BenServer.scala:28:39: Cannot decode into a value of type com.example.quickstart.BenServer.Ben, because no EntityDecoder[cats.effect.IO, com.example.quickstart.BenServer.Ben] instance could be found.[0m
+[0m[[0m[31merror[0m] [0m[0m      case Successful(resp) => resp.as[Ben][0m
+[0m[[0m[31merror[0m] [0m[0m                                      ^[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

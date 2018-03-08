@@ -1,0 +1,67 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:3:8: not found: object cats[0m
+[0m[[0m[31merror[0m] [0m[0mimport cats.effect.IO[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:4:8: not found: object fs2[0m
+[0m[[0m[31merror[0m] [0m[0mimport fs2.StreamApp[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:5:11: object circe is not a member of package io[0m
+[0m[[0m[31merror[0m] [0m[0mimport io.circe._[0m
+[0m[[0m[31merror[0m] [0m[0m          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:6:12: object http4s is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.http4s._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:7:12: object http4s is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.http4s.circe._[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:8:12: object http4s is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.http4s.dsl.Http4sDsl[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:9:12: object http4s is not a member of package org[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.http4s.server.blaze.BlazeBuilder[0m
+[0m[[0m[31merror[0m] [0m[0m           ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:12:33: not found: type StreamApp[0m
+[0m[[0m[31merror[0m] [0m[0mobject HelloWorldServer extends StreamApp[IO] with Http4sDsl[IO] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:12:52: not found: type Http4sDsl[0m
+[0m[[0m[31merror[0m] [0m[0mobject HelloWorldServer extends StreamApp[IO] with Http4sDsl[IO] {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:13:17: not found: value HttpService[0m
+[0m[[0m[31merror[0m] [0m[0m  val service = HttpService[IO] {[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:13:29: not found: type IO[0m
+[0m[[0m[31merror[0m] [0m[0m  val service = HttpService[IO] {[0m
+[0m[[0m[31merror[0m] [0m[0m                            ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:14:14: not found: value ->[0m
+[0m[[0m[31merror[0m] [0m[0m    case GET -> Root / "hello" / name =>[0m
+[0m[[0m[31merror[0m] [0m[0m             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:14:10: not found: value GET[0m
+[0m[[0m[31merror[0m] [0m[0m    case GET -> Root / "hello" / name =>[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:14:32: not found: value /[0m
+[0m[[0m[31merror[0m] [0m[0m    case GET -> Root / "hello" / name =>[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:14:22: not found: value /[0m
+[0m[[0m[31merror[0m] [0m[0m    case GET -> Root / "hello" / name =>[0m
+[0m[[0m[31merror[0m] [0m[0m                     ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:14:17: not found: value Root[0m
+[0m[[0m[31merror[0m] [0m[0m    case GET -> Root / "hello" / name =>[0m
+[0m[[0m[31merror[0m] [0m[0m                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:15:7: not found: value Ok[0m
+[0m[[0m[31merror[0m] [0m[0m      Ok(Json.obj("message" -> Json.fromString(s"Hello, ${name}")))[0m
+[0m[[0m[31merror[0m] [0m[0m      ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:15:10: not found: value Json[0m
+[0m[[0m[31merror[0m] [0m[0m      Ok(Json.obj("message" -> Json.fromString(s"Hello, ${name}")))[0m
+[0m[[0m[31merror[0m] [0m[0m         ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:15:32: not found: value Json[0m
+[0m[[0m[31merror[0m] [0m[0m      Ok(Json.obj("message" -> Json.fromString(s"Hello, ${name}")))[0m
+[0m[[0m[31merror[0m] [0m[0m                               ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:18:51: not found: type IO[0m
+[0m[[0m[31merror[0m] [0m[0m  def stream(args: List[String], requestShutdown: IO[Unit]) =[0m
+[0m[[0m[31merror[0m] [0m[0m                                                  ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:19:5: not found: value BlazeBuilder[0m
+[0m[[0m[31merror[0m] [0m[0m    BlazeBuilder[IO][0m
+[0m[[0m[31merror[0m] [0m[0m    ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/benjaminmuldrow/Documents/scala/http4s-test/quickstart/src/main/scala/com/example/quickstart/HelloWorldServer.scala:19:18: not found: type IO[0m
+[0m[[0m[31merror[0m] [0m[0m    BlazeBuilder[IO][0m
+[0m[[0m[31merror[0m] [0m[0m                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m22 errors found[0m

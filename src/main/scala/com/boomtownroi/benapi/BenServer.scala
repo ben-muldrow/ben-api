@@ -23,7 +23,6 @@ object BenServer extends StreamApp[IO] with Http4sDsl[IO] {
   }
 
   def chooseBen(bens: Json): Json = {
-    // scalacheck
     val random = new scala.util.Random
     val randomNumber = random.nextInt(100)
 

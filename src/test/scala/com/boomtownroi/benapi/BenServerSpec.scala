@@ -16,6 +16,7 @@ class BenServerSpec extends Specification with Mockito {
   private def selectTest() : MatchResult[String] = {
     val selectedBenIndex0 = BenServer.select(DataSet.sampleData, 1, 0)
     val selectedBenIndex99 = BenServer.select(DataSet.sampleData, 1, 99)
+    val selectedBenIndexOver = BenServer.select(DataSet.sampleData, 1, 256)
 
     selectedBenIndex0.asString.orNull must contain("Benjamin")
     selectedBenIndex99.asString.orNull must contain("Benjamin")

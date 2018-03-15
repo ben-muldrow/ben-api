@@ -1,9 +1,8 @@
-package com.example.quickstart
+package com.boomtownroi.benapi
 
 import cats.effect.IO
 import fs2.StreamApp
 import io.circe._
-
 import org.http4s._
 import org.http4s.circe._
 import org.http4s.dsl._
@@ -24,21 +23,22 @@ object BenServer extends StreamApp[IO] with Http4sDsl[IO] {
   }
 
   def chooseBen(bens: Json): Json = {
+    // scalacheck
     val random = new scala.util.Random
     val randomNumber = random.nextInt(100)
 
-    def select(element: Json, index: Int): Json = {
-      element.asArray.get(index).asArray.get(randomNumber)
-    }
-
     Json.obj(
-      "Name" -> select(bens, 1),
-      "Description" -> select(bens, 2),
-      "Url" -> select(bens, 3)
+      "Name" -> select(bens, 1, randomNumber),
+      "Description" -> select(bens, 2, randomNumber),
+      "Url" -> select(bens, 3, randomNumber)
     )
   }
 
-  val benService: HttpService[IO] = HttpService[IO] {
+  def select(element: Json, index: Int, random: Int): Json = {
+    element.asArray.get(index).asArray.get(random)
+  }
+
+  val benService = HttpService[IO] {
     case GET -> Root / "ben" =>
       Ok(Json.obj("Result" -> getBens.map(chooseBen).unsafeRunSync()))
   }

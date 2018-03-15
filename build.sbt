@@ -5,8 +5,8 @@ val circeVersion = "0.9.1"
 
 lazy val root = (project in file("."))
   .settings(
-    organization := "com.benjam",
-    name := "quickstart",
+    organization := "com.boomtownroi",
+    name := "benapi",
     version := "0.0.1-SNAPSHOT",
     scalaVersion := "2.12.4",
     libraryDependencies ++= Seq(
@@ -15,6 +15,7 @@ lazy val root = (project in file("."))
       "org.http4s"      %% "http4s-circe"        % Http4sVersion,
       "org.http4s"      %% "http4s-dsl"          % Http4sVersion,
       "org.specs2"     %% "specs2-core"          % Specs2Version % "test",
+      "org.specs2"     %% "specs2-mock"          % Specs2Version % "test",
       "ch.qos.logback"  %  "logback-classic"     % LogbackVersion,
       "net.databinder.dispatch" %% "dispatch-core"   % "0.13.3",
       "io.circe" %% "circe-core" % circeVersion,
